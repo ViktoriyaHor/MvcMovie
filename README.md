@@ -42,6 +42,7 @@ Trust the development certificate for HTTPS, then update appsettings.json to con
     dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
     dotnet add package Microsoft.EntityFrameworkCore.SqlServer
     dotnet add package Microsoft.EntityFrameworkCore.Tools
+    dotnet add package DotNetEnv
     ```
 
 4. **Use Scaffolding to Generate Movie Pages:**
@@ -73,15 +74,19 @@ Trust the development certificate for HTTPS, then update appsettings.json to con
   ```
   cd your-repo
   ```
-3. **Restore Dependencies:**
+3. **Create .env file using .env example:**
+   ```
+   cp .env.example .env
+   ```
+4. **Restore Dependencies:**
   ```
   dotnet restore
   ```
-4. **Apply Database Migrations:**
+5. **Apply Database Migrations:**
   ```
   dotnet ef database update
   ```
-5. **Run the Application:**
+6. **Run the Application:**
   ```
   dotnet run
   ```
