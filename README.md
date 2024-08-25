@@ -67,7 +67,7 @@ Trust the development certificate for HTTPS, then update appsettings.json to con
 
 1. **Clone the Repository:**
   ```
-  git clone https://github.com/yourusername/your-repo.git
+  git clone https://github.com/ViktoriyaHor/MvcMovie.git
   ```
 2. **Navigate to the Project Directory:**
   ```
