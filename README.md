@@ -7,7 +7,7 @@ This project is a training application developed using ASP.NET Core MVC. It is b
 ## Technology Stack
 
 - **Framework:** ASP.NET Core MVC
-- **Database:** SQL Server (via Entity Framework Core)
+- **Database:** SQLite(Development), MySQL(Production)
 - **ORM:** Entity Framework Core
 - **Development Tools:** Visual Studio Code, .NET CLI
 - **Web Server:** Kestrel
@@ -19,6 +19,33 @@ This project is a training application developed using ASP.NET Core MVC. It is b
 - **Basic Data Validation:** Includes fundamental validation and error handling mechanisms.
 - **Seed data** Implement seeding to populate the database with initial data.
 - **Search Functionality:** Allows users to search through data.
+
+## Installation Instructions
+
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/ViktoriyaHor/MvcMovie.git
+   ```
+2. **Navigate to the Project Directory:**
+   ```
+   cd MvcMovie
+   ```
+3. **Create .env file using .env example:**
+   ```
+   cp .env.example .env
+   ```
+4. **Restore Dependencies:**
+   ```
+   dotnet restore
+   ```
+5. **Apply Database Migrations:**
+   ```
+   dotnet ef database update
+   ```
+6. **Run the Application:**
+   ```
+   dotnet run
+   ```
 
 ## Steps Taken to Build and Create the Project
 
@@ -38,10 +65,9 @@ Trust the development certificate for HTTPS, then update appsettings.json to con
     dotnet tool uninstall --global dotnet-ef
     dotnet tool install --global dotnet-ef
     dotnet add package Microsoft.EntityFrameworkCore.Design
-    dotnet add package Microsoft.EntityFrameworkCore.SQLite
+    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+    dotnet add package Microsoft.EntityFrameworkCore.SQLServer
     dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-    dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-    dotnet add package Microsoft.EntityFrameworkCore.Tools
     dotnet add package DotNetEnv
     ```
 
@@ -63,31 +89,3 @@ Trust the development certificate for HTTPS, then update appsettings.json to con
    dotnet ef migrations add InitialCreate
    dotnet ef database update
   ```
-
-## Installation Instructions
-
-1. **Clone the Repository:**
-  ```
-  git clone https://github.com/ViktoriyaHor/MvcMovie.git
-  ```
-2. **Navigate to the Project Directory:**
-  ```
-  cd your-repo
-  ```
-3. **Create .env file using .env example:**
-   ```
-   cp .env.example .env
-   ```
-4. **Restore Dependencies:**
-  ```
-  dotnet restore
-  ```
-5. **Apply Database Migrations:**
-  ```
-  dotnet ef database update
-  ```
-6. **Run the Application:**
-  ```
-  dotnet run
-  ```
-in Visual Studio Code, use Ctrl+F5.
